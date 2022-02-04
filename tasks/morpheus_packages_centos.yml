@@ -23,9 +23,9 @@
         state: present
     when: morpheus_use_offline_package
 
-  when: ('morpheus-appliance' not in ansible_facts.packages) or
-        (morpheus_upgrade_flag) and
-        (ansible_distribution_major_version == "7")
+  when: (ansible_distribution_major_version == "7") and
+        (('morpheus-appliance' not in ansible_facts.packages) or
+        (morpheus_upgrade_flag))
 
 - block:
   - name: Morpheus UI | Install Morpheus
@@ -41,6 +41,7 @@
         state: present
     when: morpheus_use_offline_package
 
-  when: ('morpheus-appliance' not in ansible_facts.packages) or
-        (morpheus_upgrade_flag) and
-        (ansible_distribution_major_version == "8")
+  when: (ansible_distribution_major_version == "8") and
+        (('morpheus-appliance' not in ansible_facts.packages) or
+        (morpheus_upgrade_flag))
+        
