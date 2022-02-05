@@ -3,11 +3,12 @@
 morpheus_appliance_url: "https://morpheus.example.com"
 morpheus_use_custom_repo: false
 morpheus_version: 5.4.2-2
+morpheus_offline_version: 5.4.2-1
 morpheus_package_centos_7: "https://downloads.morpheusdata.com/files/morpheus-appliance-{{ morpheus_version }}.el7.x86_64.rpm"
 morpheus_package_centos_8: "https://downloads.morpheusdata.com/files/morpheus-appliance-{{ morpheus_version }}.el8.x86_64.rpm"
-morpheus_offline_package_centos: "https://downloads.morpheusdata.com/files/morpheus-appliance-offline-{{ morpheus_version }}.noarch.rpm"
+morpheus_offline_package_centos: "https://downloads.morpheusdata.com/files/morpheus-appliance-offline-{{ morpheus_offline_version }}.noarch.rpm"
 morpheus_package_ubuntu: "https://downloads.morpheusdata.com/files/morpheus-appliance_{{ morpheus_version }}_amd64.deb"
-morpheus_offline_package_ubuntu: "https://downloads.morpheusdata.com/files/morpheus-appliance-offline_{{ morpheus_version }}_all.deb"
+morpheus_offline_package_ubuntu: "https://downloads.morpheusdata.com/files/morpheus-appliance-offline_{{ morpheus_offline_version }}_all.deb"
 morpheus_disable_rpm_gpg_check: true
 morpheus_use_offline_package: false
 morpheus_validate_certs: false
